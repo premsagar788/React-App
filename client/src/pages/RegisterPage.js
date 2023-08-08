@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from "axios";
 
 export default function RegisterPage() {
     const [username, setUsername] = useState('');
@@ -6,13 +7,17 @@ export default function RegisterPage() {
 
     async function register(ev) {
         ev.preventDefault();
-        await fetch('http://localhost:4000/register', {
-            method: 'POST',
-            body: JSON.stringify({ username, password }),
-            headers: {'Content-Type': 'application/json'},
-        });
+        try {
+            await fetch('http://localhost:4000/register', {
+                method: 'POST',
+                body: JSON.stringify({ username, password }),
+                headers: { 'Content-Type': 'application/json' },
+            });
+        } catch (e) {
+            alert(e)
+        }
+        
     }
-
 
     return (
         <form onSubmit={register} className="register">
