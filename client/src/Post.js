@@ -2,7 +2,7 @@ export default function Post() {
     return (
         <div className="post">
             <div className="image">
-                <img src="https://techcrunch.com/wp-content/uploads/2023/07/window-snyder-1.jpg?w=1390&crop=1" />
+                <img src="https://techcrunch.com/wp-content/uploads/2023/07/window-snyder-1.jpg?w=1390&crop=1" alt="" />
             </div>
             <div className="texts">
                 <h2>Meet Window Snyder, the trailblazer who helped secure the internet and billions of devices</h2>
